@@ -1,0 +1,23 @@
+<div class="container">
+  <div style="text-align:center">
+    <h1>
+      Welcome to Football Manager
+    </h1>
+  </div>
+  <div>
+    <input type="text" [(ngModel)]="countryCode">
+    <button (click)="search()">Search</button>
+  </div>
+  <hr>
+  <a (click)="showDetail(g)" *ngFor="let g of games$ | async" class="link">
+    {{ g.Description }}
+  </a>
+  <div *ngIf="selectedItem" class="box">
+    <img [src]="selectedItem.FlagUri">
+    <br /> {{ selectedItem.MatchInfo1 }}
+    <br /> {{ selectedItem.MatchInfo2 }}
+    <br /> {{ selectedItem.MatchInfo3 }}
+    <br /> {{ selectedItem.MatchInfo4 }}
+    <br />
+  </div>
+</div>
