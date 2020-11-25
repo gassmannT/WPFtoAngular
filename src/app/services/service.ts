@@ -6,7 +6,7 @@ import { Game } from 'src/app/models/model';
   providedIn: 'root'
 })
 export class GameService {
-  private SERVICE_BASE_URL = 'http://fussballapi.azurewebsites.net/api';
+  private SERVICE_BASE_URL = 'http://footballapi123.azurewebsites.net/api';
 
   constructor(private http: HttpClient) {}
 
